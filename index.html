@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khan Collection - Discover premium fashion, clothing, shoes and accessories in Pakistan.">
+    <link rel="canonical" href="__SITE_URL__/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Khan Collection">
+    <meta property="og:title" content="Khan Collection | Premium Shopping Store">
+    <meta property="og:description" content="Discover premium fashion and shop your favourite products.">
+    <meta property="og:url" content="__SITE_URL__/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&amp;h=630&amp;fit=crop">
+    <meta property="og:image:alt" content="Khan Collection fashion store">
+    <meta name="twitter:title" content="Khan Collection | Premium Shopping Store">
+    <meta name="twitter:description" content="Discover premium fashion and shop your favourite products.">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Khan Collection | Premium Shopping Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        Welcome to Khan Collection | Premium Shopping in Pakistan
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            KHAN <span>COLLECTION</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="search-btn" onclick="document.getElementById('searchInput').focus()">Search</button>
+            <button type="button" class="cart-btn" id="openCartButton">Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="gold-text">WELCOME TO KHAN COLLECTION</p>
+
+            <h1>Style That Defines <span>Elegance</span></h1>
+
+            <p>
+                Khushamdeed! Aap ka yahan istiqbal hai
+                hamare Khan Collection mein.
+                Discover premium fashion and shop your favourite products.
+            </p>
+
+            <a href="#products" class="main-btn">SHOP NOW</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories section" id="categories">
+        <div class="section-heading">
+            <p>EXPLORE OUR STORE</p>
+            <h2>Shop By Categories</h2>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="#products" class="category-card" data-category="clothing">
+                <div class="category-icon">👔</div>
+                <h3>Shalwar Kameez</h3>
+            </a>
+
+            <a href="#products" class="category-card" data-category="fabric">
+                <div class="category-icon">🧵</div>
+                <h3>Unstitched Fabric</h3>
+            </a>
+
+            <a href="#products" class="category-card" data-category="shoes">
+                <div class="category-icon">👟</div>
+                <h3>Shoes</h3>
+            </a>
+
+            <a href="#products" class="category-card" data-category="accessories">
+                <div class="category-icon">👜</div>
+                <h3>Accessories</h3>
+            </a>
+
+            <a href="#products" class="category-card" data-category="cosmetics">
+                <div class="category-icon">💄</div>
+                <h3>Cosmetics</h3>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products section" id="products">
+        <div class="section-heading">
+            <p>OUR COLLECTION</p>
+            <h2>Featured Products</h2>
+        </div>
+
+        <div class="search-area">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search your favourite products..."
+            >
+            <button onclick="searchProducts()">SEARCH</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+
+            <div class="product-card" data-category="clothing">
+                <div class="product-image">👔</div>
+                <div class="product-info">
+                    <p>SHALWAR KAMEEZ</p>
+                    <h3>Premium Suit</h3>
+                    <span>PKR 3,500</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="fabric">
+                <div class="product-image">🧵</div>
+                <div class="product-info">
+                    <p>UNSTITCHED FABRIC</p>
+                    <h3>Premium Fabric</h3>
+                    <span>PKR 2,800</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="shoes">
+                <div class="product-image">👟</div>
+                <div class="product-info">
+                    <p>FOOTWEAR</p>
+                    <h3>Classic Shoes</h3>
+                    <span>PKR 4,000</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">👜</div>
+                <div class="product-info">
+                    <p>ACCESSORIES</p>
+                    <h3>Fashion Bag</h3>
+                    <span>PKR 2,500</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cosmetics">
+                <div class="product-image">💄</div>
+                <div class="product-info">
+                    <p>COSMETICS</p>
+                    <h3>Beauty Collection</h3>
+                    <span>PKR 1,500</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Offer Banner -->
+    <section class="offer">
+        <p>EXCLUSIVE COLLECTION</p>
+        <h2>Discover Your New Style</h2>
+        <p>Premium products at attractive prices.</p>
+        <a href="#products" class="main-btn">EXPLORE NOW</a>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="section-heading">
+            <p>OUR STORY</p>
+            <h2>About Khan Collection</h2>
+        </div>
+
+        <p class="about-text">
+            Khan Collection is your destination for fashion,
+            quality and elegance. Our goal is to provide
+            customers in Pakistan with a great online
+            shopping experience and quality products.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+        <div class="section-heading">
+            <p>WE ARE HERE TO HELP</p>
+            <h2>Contact Us</h2>
+        </div>
+
+        <p>Email: <a id="storeEmail" href="mailto:">Contact details coming soon</a></p>
+        <p>Delivery: <span id="storeDelivery">Pakistan</span></p>
+        <p>WhatsApp: <a id="storeWhatsApp" href="#">Contact details coming soon</a></p>
+    </section>
+
+<!-- CART AND CHECKOUT -->
+<div class="cart-modal" id="cartModal" aria-hidden="true">
+  <section class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartHeading">
+    <button type="button" class="close-modal" id="closeCartButton" aria-label="Close">×</button>
+    <h2 id="cartHeading">Your Cart</h2>
+    <div id="cartItems"></div>
+    <p class="cart-total" id="cartTotal">Total: PKR 0</p>
+    <form id="checkoutForm" class="checkout-form">
+      <h3>Delivery Details</h3>
+      <label for="customerName">Name</label><input id="customerName" required maxlength="100" autocomplete="name">
+      <label for="customerPhone">Phone / WhatsApp</label><input id="customerPhone" type="tel" required maxlength="40" autocomplete="tel">
+      <label for="customerAddress">Delivery Address</label><textarea id="customerAddress" required maxlength="500" rows="3" autocomplete="street-address"></textarea>
+      <p class="payment-instructions">Payment: Cash on Delivery.</p><label class="checkout-consent"><input type="checkbox" required> I agree that the shop may use my details to process this order. <a href="/policies.html" target="_blank" rel="noopener">Read store policies</a></label>
+      <button type="submit" class="detail-add-btn">PLACE ORDER</button>
+      <p id="checkoutMessage" role="status"></p><a id="whatsappOrderLink" class="main-btn whatsapp-order-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Send Order to WhatsApp</a>
+    </form>
+  </section>
+</div>
+
+<!-- PRODUCT DETAILS POPUP -->
+<div class="product-modal" id="productModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeProductDetails()">×</button>
+
+        <div class="modal-gallery">
+            <img id="mainProductImage" src="" alt="Product">
+
+            <div class="thumbnail-gallery" id="productThumbnails"></div>
+        </div>
+
+        <div class="modal-details">
+            <p id="detailCategory"></p>
+            <h2 id="detailName"></h2>
+            <h3 id="detailPrice"></h3>
+
+            <p id="detailDescription"></p>
+
+            <label>Choose Size</label>
+            <select id="productSize">
+                <option value="Standard">Standard</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="XL">XL</option>
+            </select>
+
+            <label>Choose Color</label>
+            <select id="productColor">
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Blue">Blue</option>
+                <option value="Brown">Brown</option>
+            </select>
+
+            <label>Quantity</label>
+            <input type="number" id="productQuantity"
+                   value="1" min="1" max="10">
+
+            <button id="detailAddButton" class="detail-add-btn">
+                ADD TO CART
+            </button>
+        </div>
+
+    </div>
+</div>
+
+    </main>
+
+    <section class="store-chat" aria-label="Store chat"><button type="button" id="chatLauncher" class="chat-launcher">Chat with the shop</button><div id="chatPanel" class="chat-panel" hidden><header class="chat-head"><strong>Chat with Khan Collection</strong><button type="button" id="chatClose" aria-label="Close chat">×</button></header><div id="chatMessages" class="chat-messages" aria-live="polite"><p class="chat-empty">Send us a message. We will reply here.</p></div><form id="chatStartForm" class="chat-start-form"><input id="chatName" required maxlength="80" placeholder="Your name" autocomplete="name"><input id="chatPhone" type="tel" required maxlength="40" placeholder="Phone number" autocomplete="tel"><textarea id="chatFirstMessage" required maxlength="1000" placeholder="How can we help?"></textarea><label class="chat-consent"><input type="checkbox" required> Use my details to reply. <a href="/policies.html" target="_blank" rel="noopener">Privacy</a></label><button type="submit">Start chat</button></form><form id="chatReplyForm" class="chat-reply-form" hidden><input id="chatReply" required maxlength="1000" placeholder="Write a message"><button type="submit">Send</button></form><p id="chatStatus" class="chat-status" role="status"></p></div></section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="logo">
+            KHAN <span>COLLECTION</span>
+        </div>
+
+        <p>Fashion • Quality • Elegance</p>
+
+        <p>© 2026 Khan Collection. All Rights Reserved.</p>
+        <nav class="footer-policies" aria-label="Store policies"><a href="/policies.html">Privacy</a><a href="/policies.html#deliveryPolicy">Delivery</a><a href="/policies.html#returnsPolicy">Returns</a></nav>
+        <a class="admin-link" href="/admin.html">Store Admin</a>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
